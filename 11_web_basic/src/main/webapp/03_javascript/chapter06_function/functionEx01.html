@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트의 함수</title>
+<script>
+
+	/*
+	
+		- 자바스크립트 함수의 역할 및 용도는 자바의 메서드와 같다.
+		- 주로 HTML의 Element와 연결하여 사용한다.
+		
+		[ 형식 ]
+		
+		function 함수명(파라메타){
+			return 리턴값; 
+		}
+	
+	*/
+	
+	/*
+	
+		[ 자바 메서드 ]
+		
+		반환타입 메서드이름(파라미터) {
+			return 결과데이터;
+		}
+	
+	*/
+	
+	// 함수 정의(function define)
+	function testFunction1() {
+		alert("함수1이 호출되었습니다.");
+		return; // 결과데이터가 없을 경우 return 키워드는 생략가능하다.
+	}
+	
+	function testFunction2() {
+		alert("함수2가 호출되었습니다.");
+	}
+	
+	// 함수 호출(function call)
+	//testFunction1();
+	
+</script>
+</head>
+<body>
+
+	<h3>함수 호출 예시</h3>
+
+	<!-- 1) 이벤트(Event)와 연결해서 사용한다. -->
+	<input type="button" value="버튼" onclick="testFunction1(); testFunction2();"/> <!-- 버튼이 클릭될 경우 실행 --> 
+	<br>
+	<input type="text" onkeyup="testFunction1()"/>  <!-- 키보드가 눌릴 경우 실행 -->
+	
+	<hr>
+	
+	<!-- 2) HTML Element에서 자바스크립트 연결 속성(link)을 사용하여 자바스크립트 함수를 호출한다. -->
+	<a href="javascript:testFunction2();"><img src="../images/pic_1.jpg" width="300" height="300"></a>
+
+</body>
+</html>

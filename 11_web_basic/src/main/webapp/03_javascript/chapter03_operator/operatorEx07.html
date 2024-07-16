@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문자결합 연산자 +</title>
+<script>
+
+	// 1) 문자열 + 문자열 = 문자열
+	let data1 = "문자열 ";
+	let data2 = "결합연산자";
+	document.write(data1 + data2 , "<br><hr>");
+	
+	// 2) 문자열 + 숫자 = 문자열
+	let data3 = 10000000;
+	let data4 = "원";
+	document.write(data3 + data4 , "<br><hr>");
+
+	// 3) 숫자 + 숫자 = 숫자
+	let data5 = 3;
+	let data6 = 12;
+	document.write(data5 + data6 , "<br><hr>");
+	
+	
+	// 예제 1)
+	let data7 = "<form>";
+		data7 += "<p>텍스트 : <input type='text'></p>";
+		data7 += "<p>체크박스 : <input type='checkbox'></p>";
+		data7 += "<p>라디오 : <input type='radio'></p>";
+		data7 += "<p>텍스트 에어리어 : <br><textarea cols='10' rows='10'></textarea></p>";
+		data7 += "</form>";
+	document.write(data7 , "<br><hr>");
+	
+	// 예제 2)
+	let data8 = "<table border='1'>";
+		data8 += "<tr>";
+		data8 += "<td>1</td>";
+		data8 += "<td>2</td>";
+		data8 += "<td>3</td>";
+		data8 += "</tr>";
+		data8 += "<tr>";
+		data8 += "<td>4</td>";
+		data8 += "<td>5</td>";
+		data8 += "<td>6</td>";
+		data8 += "</tr>";
+		data8 += "</table>";
+	document.write(data8 , "<br><hr>");
+	
+	// 블록 문자열 백틱(`) : 여러줄의 문자열을 생성할 수 있다.
+	let data9 = `
+		<form>
+			<p>텍스트 : <input type="text"/></p>
+			<p>체크박스 : <input type="checkbox"/></p>
+			<p>라디오 : <input type="radio"/></p>
+			<p>텍스트 에어리어 : <br><textarea cols="10" rows="10"></textarea></p>
+		</form>
+	`;
+	
+	document.write(data9 , "<br><hr>");
+	
+	let data10 = `
+		<table border='1'>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</table>
+	`;
+	
+	document.write(data10 , "<br><hr>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

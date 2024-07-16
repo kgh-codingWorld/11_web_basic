@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예제</title>
+<script>
+	
+	function formValidationCheck(){
+	
+		let id = document.f.id;
+		if (id.value == "") {
+			alert("아이디를 입력하세요.");
+			id.focus();
+			return false;
+		}
+		
+		let pw = document.f.pw;
+		if (pw.value == "") {
+			alert("비밀번호를 입력하세요.");
+			pw.focus();
+			return false;
+		}
+		
+		let name = document.f.name;
+		if (name.value == "") {
+			alert("이름을 입력하세요.");
+			name.focus();
+			return false;
+		}
+		
+		let tel = document.f.tel;
+		if (tel.value == "") {
+			alert("연락처를 입력하세요.");
+			tel.focus();
+			return false;
+		}
+		
+		let email = document.f.email;
+		if (email.value == "") {
+			alert("이메일을 입력하세요.");
+			email.focus();
+			return false;
+		}
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<!-- 
+	
+		# 입력하지 않은 필드의 값을 검증하여 
+		
+			1) alert으로 안내
+			2) focus로 이동
+			
+			하는 스크립트를 작성해 보시오. 
+		
+	-->
+
+	<div align="center">
+		<h1>회원 가입</h1>
+		<p>저희 아카데미를 찾아주셔서 감사합니다.</p>
+		<hr>
+		<form name="f" onsubmit="return formValidationCheck();">
+			<h4>로그인 정보</h4>
+			<p>아이디 : <input type="text" name="id" autofocus></p>
+			<p>패스워드 : <input type="password" name="pw"></p>
+			<br>
+			<h4>개인 정보</h4>
+			<p>이름 : <input type="text" name="name" placeholder="공백없이 입력하세요"></p>
+			<p>연락처 : <input type="text" name="tel" size="20" placeholder="000-0000-0000"> </p>
+			<p>이메일 : <input type="email" name="email"></p>
+			<p><input type="submit" value="전송"></p>
+			
+		</form>	
+	</div>
+	
+</body>
+</html>

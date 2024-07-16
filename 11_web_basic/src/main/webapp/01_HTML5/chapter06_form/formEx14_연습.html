@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> 학번, 이름, 학년, 선택과목을 입력하는 폼</h1>
+	<br/>
+	<form>
+		<p><h3>학번 : </h3><input type="text" name="ownNum"/></p>
+		<p><h3>이름 : </h3><input type="text" name="stuName" min="2"/></p>
+		<p><h3>학년 : </h3>
+		<input type="radio" name="grade" value="1"/>1학년
+		<input type="radio" name="grade" value="2"/>2학년
+		<input type="radio" name="grade" value="3"/>3학년</p>
+		<p><h3>선택과목 : </h3>
+		<select name="object">
+			<option name="java" value="JAVA">JAVA</option>
+			<option name="spring" value="Spring">Spring</option>
+			<option name="jsp" value="JSP">JSP</option>
+		</select></p>
+		<p>
+			<input type="submit" value="입력완료"/>
+			<input type="reset" value="다시쓰기"/>
+	</form>
+</body>
+</html>

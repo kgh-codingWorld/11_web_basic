@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터의 형변환(casting)</title>
+<script>
+
+	// 1) String(숫자) : 숫자 > 문자열 형변환 
+	let var1 = 10000;
+	//let strVar1 = var1 + ""; 	
+	let strVar1 = String(var1);
+	
+	console.log(var1 , typeof var1);
+	console.log(strVar1 , typeof strVar1);
+	console.log("");
+	
+	
+	// 2) Number(문자열) : 문자열 > 숫자 형변환
+	let var2 = "27000";
+	let nVar2 = Number(var2);
+	console.log(var2 , typeof var2);
+	console.log(nVar2 , typeof nVar2);
+	console.log("");
+	
+	
+	// 3) Math.round(실수) : 실수 > 정수(반올림)
+	//    Math.ceil(실수)  : 실수 > 정수(올림)
+	//    Math.floor(실수) : 실수 > 정수(버림)
+	
+	let var3 = 10 / 3;
+	
+	console.log(var3 , typeof var3); // 소수점까지 연산 (자바와 다름)
+	console.log(Math.round(var3)); // 반올림
+	console.log(Math.ceil(var3));  // 올림
+	console.log(Math.floor(var3)); // 버림
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>2.배송지 정보</h1>
+	<table border="1">
+		<tr>
+			<td>배송방법</td>
+			<td>
+				<input type="radio" name="deliveryMethod" value="general" checked/>일반택배
+				<input type="radio" name="deliveryMethod" value="market"/>편의점택배
+				<input type="radio" name="deliveryMethod" value="abroad"/>해외배송
+			</td>
+		</tr>
+		<tr>
+			<td>배송지 선택</td>
+			<td>
+				<input type="radio" name="deliveryLocal" value="generalLocal" checked/>기본배송지
+				<input type="radio" name="deliveryLocal" value="newLocal"/>새로입력
+				<input type="radio" name="deliveryLocal" value="recentLocal"/>최근배송지
+			</td>
+		</tr>
+		<tr>
+			<td>받으실 분</td>
+			<td><input type="text" name="수신자"/></td>
+		</tr>
+		<tr>
+			<td>휴대폰번호</td>
+			<td>
+				<select name="frontNum">
+					<option value="010" selected>010</option>
+					<option value="011">011</option>
+					<option value="012">012</option>
+				</select>
+				<input type="text" name="middleNum"/>
+				<input type="text" name="lastNum"/>
+			</td>
+		</tr>
+		<tr>
+			<td>유선전화(선택)</td>
+			<td>
+				<select name="frontTelNum">
+					<option value="02" selected>02</option>
+					<option value="031">031</option>
+					<option value="070">070</option>
+				</select>
+				<input type="text" name="middleTelNum"/>
+				<input type="text" name="lastTelNum"/>
+			</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>
+				<p><input type="text" name="postNum"/><a href="#">우편번호검색</a></p>
+				<p>지번 주소 : 
+					<input type="text" name="address1"/>
+				</p>
+				<p> 도로명 주소 : 
+					<input type="text" name="address2"/>
+				</p>
+				<p> 나머지 주소 :
+					<input type="text" name="address3"/>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td>배송 메시지</td>
+			<td><input type="text" name="msg" placeholder="택배 기사님께 전달할 메시지"/></td>
+		</tr>
+		<tr>
+			<td>선물 포장</td>
+			<td>
+				<input type="radio" name="packing" value="yes"/>예
+				<input type="radio" name="packing" value="no" checked/>아니오
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
