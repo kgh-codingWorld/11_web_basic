@@ -10,30 +10,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ajaxEx04")
-public class AjaxEx04 extends HttpServlet {
+@WebServlet("/ajaxEx05_연습")
+public class AjaxEx05_연습 extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-       
+     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx04.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("04_jQuery/chapter04_AJAX/ajaxEx05_연습.jsp");
 		dis.forward(request, response);
 	}
 	
-	// AJAX 처리 로직
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("utf-8");
+		String id = request.getParameter("id");
 		
-		// 3) 요청받은 데이터를 처리하여 결과를 서버에 반환한다.
-		String testData = request.getParameter("testData");
-		
-		String result = "(처리된 데이터)" + testData;
-		
-		response.setContentType("text/html; charset=UTF-8");
+		String result = "N";
+		String[] userList = {"user1", "user2", "user3", "user4", "user5"};
+		for(int i=0; i<userList.length; i++) {
+			if(id.equals(userList[i])) {
+				result = "Y";
+			}
+		}
 		
 		PrintWriter out = response.getWriter();
 		out.print(result);
 	}
-	
+
 }

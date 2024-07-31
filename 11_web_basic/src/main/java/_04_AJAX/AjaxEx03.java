@@ -23,7 +23,10 @@ public class AjaxEx03 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// PrintWriter 객체를 사용하여 AJAX 성공 콜백함수에 데이터를 반환한다.
+		response.setContentType("text/html; charset=UTF-8");
 		
+		PrintWriter out = response.getWriter();
+		out.print("반환데이터 샘플");
 	}
 	
 	

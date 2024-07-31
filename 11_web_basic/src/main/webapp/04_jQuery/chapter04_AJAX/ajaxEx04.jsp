@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ajax workflow</title>
+<script src="04_jQuery/js/jquery-3.7.1.min.js"></script>
 <script>
 
 	$().ready(function(){
@@ -11,8 +12,17 @@
 		$("#startBtn").click(function(){
 			
 				
-				// 2) 데이터를 서버(servlet)로 전송 [3번 절차는 servlet에서 진행]
-				// 4) 화면 업데이트
+			// 2) 데이터를 서버(servlet)로 전송 [3번 절차는 servlet에서 진행]
+			$.ajax({
+				url : "ajaxEx04",
+				type : "post",
+				data : {"testData" : $("#testData").val()},
+				success : function(data) {
+					// 4) 화면 업데이트
+					$("#resultMsg").text(data);
+				}
+			});
+		
 			
 		});
 		
